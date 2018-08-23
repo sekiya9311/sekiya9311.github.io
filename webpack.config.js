@@ -1,4 +1,5 @@
 const path = require('path');
+const hardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 
 module.exports = {
   devtool: 'source-map',
@@ -24,5 +25,8 @@ module.exports = {
   },
   node: {
     __dirname: false
-  }
+  },
+  plugins: [
+    new hardSourceWebpackPlugin()
+  ]
 };
