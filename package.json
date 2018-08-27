@@ -10,10 +10,13 @@
     "@types/react-dom": "^16.0.7",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
     "webpack": "^4.17.1",
     "webpack-cli": "^3.1.0"
   },
   "devDependencies": {
+    "@types/react-redux": "^6.0.6",
     "babel-core": "^6.21.0",
     "babel-loader": "^7.1.4",
     "babel-preset-es2015": "^6.24.1",
