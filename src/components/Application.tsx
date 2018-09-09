@@ -46,7 +46,7 @@ export class Application extends React.Component<{}, ApplicationState> {
               </Toolbar>
             </AppBar>
             <Drawer open={this.state.drawerOpen} onClose={this.setDrawerOpen(false)}>
-              <DrawerMenu />
+              <DrawerMenu itemClick={this.setDrawerOpen(false)} />
             </Drawer>
           </div>
           <main>

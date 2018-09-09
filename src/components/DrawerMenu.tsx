@@ -13,12 +13,20 @@ import {
 } from '@material-ui/core';
 
 import {
-  AccountBox
+  AccountBox,
+  Build,
+  Face
 } from '@material-ui/icons';
 
-export class DrawerMenu extends React.Component<{}, {}> {
-  constructor() {
-    super({});
+import { DrawerButton } from './DrawerButton';
+
+interface DrawerMenuProps {
+  itemClick: (itemName: string) => void
+}
+
+export class DrawerMenu extends React.Component<DrawerMenuProps, {}> {
+  constructor(props: DrawerMenuProps) {
+    super(props);
   }
   render() {
     return (
@@ -26,18 +34,13 @@ export class DrawerMenu extends React.Component<{}, {}> {
         <List>
           <Link to="/">
             <ListItem button={true} >
-              <ListItemText primary="Home" />
+              <ListItemText primary="Home" onClick={() => this.props.itemClick("Home")} />
             </ListItem>
           </Link>
           <Divider />
-          <Link to="accounts">
-            <ListItem button={true} >
-              <ListItemIcon>
-                <AccountBox />
-              </ListItemIcon>
-              <ListItemText primary="Accounts" />
-            </ListItem>
-          </Link>
+          <DrawerButton text="Profile" icon={Face} onClick={this.props.itemClick} />
+          <DrawerButton text="Products" icon={Build} onClick={this.props.itemClick} />
+          <DrawerButton text="Accounts" icon={AccountBox} onClick={this.props.itemClick} />
         </List>
       </div>
     );
