@@ -16,6 +16,7 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
+        exclude: /node_modules/,
         loader: "ts-loader"
       },
       {
@@ -25,10 +26,11 @@ module.exports = {
       }
     ]
   },
-  node: {
-    __dirname: false
-  },
   plugins: [
     new hardSourceWebpackPlugin()
-  ]
+  ],
+  devServer: {
+    contentBase: __dirname,
+    port: 3000,
+  }
 };
