@@ -7,7 +7,6 @@ import {
 import {
   List,
   ListItem,
-  ListItemIcon,
   ListItemText,
   Divider
 } from '@material-ui/core';

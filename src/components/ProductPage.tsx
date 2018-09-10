@@ -1,13 +1,13 @@
 import * as React from 'react';
 
-export class MyAppsPage extends React.Component<{}, {}> {
+export class ProductPage extends React.Component<{}, {}> {
   constructor() {
     super({});
   }
   render() {
     return (
       <div>
-        MyAppsPage.tsx
+        ProductPage
       </div>
     );
   }

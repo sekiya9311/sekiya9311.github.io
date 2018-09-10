@@ -19,8 +19,9 @@ import {
 
 import { DrawerMenu } from './DrawerMenu';
 import { HomePage } from './HomePage';
-import { Accounts } from './Accounts';
-import { MyAppsPage } from './MyAppsPage';
+import { AccountPage } from './AccountPage';
+import { ProductPage } from './ProductPage';
+import { ProfilePage } from './ProfilePage';
 
 interface ApplicationState {
   drawerOpen: boolean
@@ -52,8 +53,9 @@ export class Application extends React.Component<{}, ApplicationState> {
           <main>
             <Switch>
               <Route exact path="/" component={HomePage} />
-              <Route path="/accounts" component={Accounts} />
-              <Route path="/myapps" component={MyAppsPage} />
+              <Route path="/profile" component={ProfilePage} />
+              <Route path="/products" component={ProductPage} />
+              <Route path="/accounts" component={AccountPage} />
             </Switch>
           </main>
         </div>
